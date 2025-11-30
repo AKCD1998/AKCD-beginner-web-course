@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock Paper scissors for Lesson 10
+    </title>
+    <link rel="stylesheet" href="13-rock-paper-scissors.css">
+  </head>
+  <body>
+    <h1 class="title">Rock Paper Scissors</h1>
+
+      <button id="rockbtn"  class="move-button js-rock-button"><img src="images/rock-emoji.png" class ="move-icon" alt="Rock"></button>
+
+      <button id="paperbtn"  class="move-button js-paper-button"><img src="images/paper-emoji.png" class ="move-icon" alt="Paper"></button>
+
+      <button id="scissorsbtn"  class="move-button js-scissors-button"><img src="images/scissors-emoji.png" class ="move-icon" alt="Scissors"></button>
+      <h2 class="js-result result"></h2>
+
+      <p class="js-standoff">
+      </p>
+
+      <p class="js-score"></p>
+
+      <button id="resetbtn" onclick="
+        score.player = 0; 
+        score.computer = 0; 
+        score.ties = 0;
+        localStorage.removeItem('score');
+        alert(`score reset!\nYou: ${score.player}  Computer: ${score.computer}  ties: ${score.ties}`)
+
+        updateScoreElement();
+        showResultMessage();
+        ">Reset Score</button>
+
+        <button class="auto-play-button" onclick="
+        autoPlay();
+        ">Auto play</button>
+
+    </body>
+    <script src = "13-rock-paper-scissors.js">      
+    </script>
+  </head>
+</html>
